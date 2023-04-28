@@ -10,9 +10,12 @@ const inputHeight = document.querySelector('#height');
 form.onsubmit = (e) => {
   e.preventDefault();
 
+  AlertError.alertErroRemove();
+
   const weight = inputWeight.value;
   const height = inputHeight.value;
 
+  
   const weightOrHeightIsNotNumber = notNumber(weight) || notNumber(height)
   if (weightOrHeightIsNotNumber) {
     AlertError.alertErroInsert();
@@ -27,7 +30,15 @@ form.onsubmit = (e) => {
 
 function displayResultMessege(result) {
   const messege = `Seu IMC é de ${result}`;
-
+  
   Modal.messege.innerText = messege;
   Modal.open()
+}
+
+inputWeight.oninput = () => {
+  AlertError.alertErroRemove();
+}
+
+inputHeight.oninput = () => {
+  AlertError.alertErroRemove();
 }
