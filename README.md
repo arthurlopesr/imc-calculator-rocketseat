@@ -9,6 +9,6 @@
 
 The following tools were used in building the project:
 
--   ** JavaScript
--   ** CSS
--   ** HTML
+-    JavaScript
+-    CSS
+-    HTML
